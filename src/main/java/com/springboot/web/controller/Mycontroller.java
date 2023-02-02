@@ -2,9 +2,11 @@ package com.springboot.web.controller;
 
 
 import java.time.LocalDate;
+import java.util.List;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
@@ -20,6 +22,17 @@ public class Mycontroller {
 		
 		return "about";
 		// about.html
+	}
+	
+	
+	// handling Iteration
+	@GetMapping("/exammple-loop")
+	public String iteratehandler(Model m)
+	{
+		List <String> names = List.of("Samyak", "Dhruv" , "Deepak" , "John");
+		m.addAttribute("names",names);
+		return "iterate";
+		
 	}
 
 }
