@@ -48,9 +48,10 @@ public class Mycontroller {
 	
 	//handler for fragment
 	@GetMapping("/service")
-	public String serviceHandler()
+	public String serviceHandler(Model m)
 	{
-		
+		m.addAttribute("title" , "I want to Die ");
+		m.addAttribute("subtitle" , "now");
 		return "service";
 	}
 
