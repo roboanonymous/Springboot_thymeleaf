@@ -54,5 +54,11 @@ public class Mycontroller {
 		m.addAttribute("subtitle" , "now");
 		return "service";
 	}
+	
+	@GetMapping("/newabout")
+	public String newAbout()
+	{
+		return "aboutnew";
+	}
 
 }
